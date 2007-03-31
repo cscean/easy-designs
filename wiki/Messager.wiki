@@ -1,4 +1,4 @@
-#summary Messager generates overlay messages onto the page
+#summary A script to generate overlay messages onto the page
 #labels messager,javascript,overview,Featured
 
 == Current Version ==
