@@ -1,5 +1,5 @@
 #summary Messager generates overlay messages onto the page
-#labels messager,javascript,overview
+#labels messager,javascript,overview,Featured
 
 == Current Version ==
 
