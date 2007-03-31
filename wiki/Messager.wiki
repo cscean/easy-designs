@@ -3,7 +3,7 @@
 
 == Current Version ==
 
-1.0 (14 October 2006)
+1.0 (18 October 2006)
 
 == Requirements ==
 
@@ -31,4 +31,4 @@ If you are interested in helping to further develop this script, you can [http:/
 
 == Change Log ==
 
-* 1.0 (14 October 2005) - Initial script
+* 1.0 (18 October 2006) - Initial script
