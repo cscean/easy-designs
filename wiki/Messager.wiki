@@ -1,5 +1,5 @@
 #summary A script to generate overlay messages onto the page
-#labels messager,javascript,overview,Featured
+#labels messager,javascript,overview
 
 == Current Version ==
 
