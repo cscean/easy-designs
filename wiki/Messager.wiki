@@ -1,0 +1,36 @@
+#summary One-sentence summary of this page.
+#labels messager,javascript,overview
+
+= Messager = 
+
+Messager generates overlay messages onto the page. The length of time the message is displayed depends on the amount of content contained in it, so it stay around long enough to read it comfortably, but doesn not stay around too long. This script will also pick up the content of any element with an `ID` of "notice" and display its contents in a message box.
+
+== Current Version ==
+
+1.0 (14 October 2006)
+
+== Requirements ==
+
+This script requires [http://prototypejs.org Prototype] and [http://moofx.mad4milk.net/ moo.fx] to run. It comes with a CSS file to control basic display which the script dynamically adds to the page from the location `/css/messager.css</span>`.
+
+== Use ==
+
+You can call `Messager.make()` and pass your message string (including HTML) as the argument at any point to trigger a message.
+
+== Demo ==
+
+[http://easy-designs.net/code/messager/demo.html View this script in action]
+
+== Optimized Releases ==
+
+These releases have been compressed using [http://dean.edwards.name/packer/ Dean Edwards' packer].
+
+* Compressed 1.0 [1.41KB .zip archive
+
+== Development Version ==
+
+If you are interested in helping to further develop this script, you can download the uncompressed JavaScript source file.
+
+== Change Log ==
+
+* 1.0 (14 October 2005) - Initial script
