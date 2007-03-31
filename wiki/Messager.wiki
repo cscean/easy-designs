@@ -1,9 +1,5 @@
-#summary One-sentence summary of this page.
+#summary Messager generates overlay messages onto the page
 #labels messager,javascript,overview
-
-= Messager = 
-
-Messager generates overlay messages onto the page. The length of time the message is displayed depends on the amount of content contained in it, so it stay around long enough to read it comfortably, but doesn not stay around too long. This script will also pick up the content of any element with an `ID` of "notice" and display its contents in a message box.
 
 == Current Version ==
 
@@ -15,6 +11,8 @@ This script requires [http://prototypejs.org Prototype] and [http://moofx.mad4mi
 
 == Use ==
 
+The length of time the message is displayed depends on the amount of content contained in it, so it stay around long enough to read it comfortably, but doesn not stay around too long. This script will also pick up the content of any element with an `ID` of "notice" and display its contents in a message box.
+
 You can call `Messager.make()` and pass your message string (including HTML) as the argument at any point to trigger a message.
 
 == Demo ==
@@ -25,11 +23,11 @@ You can call `Messager.make()` and pass your message string (including HTML) as 
 
 These releases have been compressed using [http://dean.edwards.name/packer/ Dean Edwards' packer].
 
-* Compressed 1.0 [1.41KB .zip archive
+* [http://easy-designs.googlecode.com/svn/trunk/Messager/1.0/messager-v1.0.zip Compressed 1.0] [2.25KB ZIP archive]
 
 == Development Version ==
 
-If you are interested in helping to further develop this script, you can download the uncompressed JavaScript source file.
+If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/Messager/working/messager.js download the uncompressed JavaScript source file].
 
 == Change Log ==
 
