@@ -1,0 +1,45 @@
+#summary This script allows you to stripe just about anything you want — <code>DL</code>s, <code>OL</code>s, <code>UL</code>s, and <code>TABLES</code>s.
+#labels javascript
+
+== Current Version ==
+
+0.1 (28 August 2006)
+
+== Requirements ==
+
+This script requires [http://prototypejs.org Prototype].
+
+== License ==
+
+Stripey is distributed under the liberal [http://easy-designs.googlecode.com/svn/trunk/Stripey/working/LICENSE MIT License].
+
+== Use ==
+
+You simply make a `new Stripey()`, supplying it with the `ID` of the element you want to stripe:
+
+{{{
+var ul = new Stripey( 'my_id' );
+}}}
+
+Stripey will automatically classify the identified element's rows as "odd" or "even". If you'd rather use other names, you can do that too:
+
+{{{
+var ul = new Stripey( 'my_id', 'pretty', 'prettier' );
+}}}
+
+== Demo ==
+
+[http://easy-designs.googlecode.com/svn/trunk/Stripey/demo/ View this script in action]
+
+== Optimized Releases ==
+
+  * [http://easy-designs.googlecode.com/svn/trunk/Stripey/0.1/stripey-v1.0.zip Compressed 0.1] [2.04KB .zip archive]
+
+== Development Version ==
+
+If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/Stripey/working/stripey.js download the uncompressed JavaScript source file].
+
+== Change Log ==
+
+  * 0.1 (28 August 2006) - Initial script
+
