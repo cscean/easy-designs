@@ -33,7 +33,7 @@ You can classify links as "ignore" to have them ignored up by the script:
 <a href="http://foo.bar.com" class="ignore">link</a>
 }}}
 
-You can also use the content generation from CSS2 as a fall-back for the script. When the script runs, it will class the <html> as “noted”. You simply supply the following rules to add the content generation and then remove it when the script runs:
+You can also use the content generation from CSS2 as a fall-back for the script. When the script runs, it will classify the `HTML` element as “noted.” You simply supply the following rules to add the content generation and then remove it when the script runs:
 
 {{{
 a:link:after,
@@ -66,4 +66,3 @@ If you are interested in helping to further develop this script, you can [http:/
   * 1.1 (12 May 2005) - Added search for ignore class to avoid listing certain links
   * 1.2 (5 June 2005) - Added support for jsUtilities 2.0 & fall-back CSS2 support
   * 1.3 (21 June 2005) - Added support for jsUtilities 2.1 & fixed IE incompatibilities
-
