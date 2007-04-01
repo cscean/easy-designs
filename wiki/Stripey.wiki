@@ -1,4 +1,4 @@
-#summary This script allows you to stripe just about anything you want — <code>DL</code>s, <code>OL</code>s, <code>UL</code>s, and <code>TABLES</code>s.
+#summary This script allows you to stripe just about anything you want — `DL`, `OL`, `UL`, and `TABLE`.
 #labels javascript
 
 == Current Version ==
@@ -42,4 +42,3 @@ If you are interested in helping to further develop this script, you can [http:/
 == Change Log ==
 
   * 0.1 (28 August 2006) - Initial script
-
