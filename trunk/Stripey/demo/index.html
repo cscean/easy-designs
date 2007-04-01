@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Stripey Test &#172; Easy Designs</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <meta name="author" content="Aaron Gustafson (aaron at easy-designs dot net)" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <meta name="ROBOTS" content="ALL" />
+  <meta name="Copyright" content="(CC) 1999-2007 Easy Designs, LLC. Except where otherwise noted, this site is licensed under a Creative Commons License." />
+  <meta http-equiv="imagetoolbar" content="no" />
+  <meta name="Rating" content="General" />
+  <script type="text/javascript" src="prototype.js"></script>
+  <script type="text/javascript" src="../working/stripey.js"></script>
+  <script type="text/javascript">
+    /* Usage:
+     *
+     * var foo = new Stripey( 'id', 'odd', 'even' );
+     *
+     * The odd and even class names are optional and default to
+     * "odd" and "even" (respectively) when you don't supply them.
+     * You can use it wherever you want it just requires Prototype
+     * and needs to be run somehow onload
+     *
+     */
+    window.onload = function(){
+      var ul = new Stripey( 'test_1' );
+      var ol = new Stripey( 'test_2' );
+      var dl = new Stripey( 'test_3' );
+      var t1 = new Stripey( 'test_4' );
+      var t2 = new Stripey( 'test_5', 'pretty', 'prettier' );
+    };
+  </script>
+  <style type="text/css" media="screen">
+    dt {
+      margin-top: 0;
+    }
+    .odd {
+      background: #999;
+    }
+    .even {
+      background: #ccc;
+    }
+    .pretty {
+      background: #f67fff;
+    }
+    .prettier {
+      background: #ff7fcc;
+    }
+  </style>
+</head>
+<body>
+<div id="content">
+  <h1>Striping test</h1>
+
+  <p>Testing how to stripe <code>ul</code>, <code>ol</code>, <code>dl</code>, and <code>table</code> elements.</p>
+
+  <h2>Test 1: <code>ul</code></h2>
+
+  <ul id="test_1">
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+  </ul>
+
+  <h2>Test 2: <code>ol</code></h2>
+
+  <ol id="test_2">
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+    <li>test</li>
+  </ol>
+
+  <h2>Test 3: <code>dl</code></h2>
+
+  <dl id="test_3">
+    <dt>test</dt>
+    <dd>This is some text</dd>
+    <dt>test</dt>
+    <dd>This is some text</dd>
+    <dt>test</dt>
+    <dt>test</dt>
+    <dd>This is some text</dd>
+    <dt>test</dt>
+    <dd>This is some text</dd>
+    <dt>test</dt>
+    <dd>This is some text</dd>
+    <dd>This is some text</dd>
+    <dt>test</dt>
+    <dd>This is some text</dd>
+    <dt>test</dt>
+    <dd>This is some text</dd>
+  </dl>
+
+
+  <h2>Test 4: <code>table</code> with <code>tbody</code></h2>
+
+  <table id="test_4" summary="this is just a table test">
+    <caption>Table test</caption>
+    <thead>
+      <tr>
+        <th>test</th>
+        <th>test</th>
+        <th>test</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <th>test</th>
+        <td>test</td>
+        <td>test</td>
+      </tr>
+      <tr>
+        <th>test</th>
+        <td>test</td>
+        <td>test</td>
+      </tr>
+      <tr>
+        <th>test</th>
+        <td>test</td>
+        <td>test</td>
+      </tr>
+      <tr>
+        <th>test</th>
+        <td>test</td>
+        <td>test</td>
+      </tr>
+      <tr>
+        <th>test</th>
+        <td>test</td>
+        <td>test</td>
+      </tr>
+      <tr>
+        <th>test</th>
+        <td>test</td>
+        <td>test</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Test 5: <code>table</code> without <code>tbody</code></h2>
+
+  <table id="test_5" summary="this is just a table test">
+    <tr>
+      <th>test</th>
+      <td>test</td>
+      <td>test</td>
+    </tr>
+    <tr>
+      <th>test</th>
+      <td>test</td>
+      <td>test</td>
+    </tr>
+    <tr>
+      <th>test</th>
+      <td>test</td>
+      <td>test</td>
+    </tr>
+    <tr>
+      <th>test</th>
+      <td>test</td>
+      <td>test</td>
+    </tr>
+    <tr>
+      <th>test</th>
+      <td>test</td>
+      <td>test</td>
+    </tr>
+    <tr>
+      <th>test</th>
+      <td>test</td>
+      <td>test</td>
+    </tr>
+  </table>
+</div>
+<div id="footer">
+  <p class="copyright"><a id="cc" href="http://creativecommons.org/licenses/by-sa/2.0/" title="View the Creative Commons license for this page">(CC)</a> 1999-2007 Easy Designs, LLC. Except where otherwise <a href="/license.php">noted</a>, this site is licensed under a <a href="http://creativecommons.org/">Creative Commons</a> License.</p> 
+</div> 
+</body>
+</html>
