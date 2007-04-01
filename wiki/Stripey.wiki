@@ -11,7 +11,7 @@ This script requires [http://prototypejs.org Prototype].
 
 == License ==
 
-Stripey is distributed under the liberal [http://easy-designs.googlecode.com/svn/trunk/Stripey/working/LICENSE MIT License].
+Stripey is distributed under the liberal [http://easy-designs.net/code/Stripey/working/LICENSE MIT License].
 
 == Use ==
 
@@ -29,7 +29,7 @@ var ul = new Stripey( 'my_id', 'pretty', 'prettier' );
 
 == Demo ==
 
-[http://easy-designs.googlecode.com/svn/trunk/Stripey/demo/ View this script in action]
+[http://easy-designs.net/code/stripey/demo/ View this script in action]
 
 == Optimized Releases ==
 
