@@ -29,7 +29,7 @@ var ul = new Stripey( 'my_id', 'pretty', 'prettier' );
 
 == Demo ==
 
-[http://easy-designs.net/code/stripey/demo/ View this script in action]
+[http://easy-designs.googlecode.com/svn/trunk/Stripey/demo/index.html View this script in action]
 
 == Optimized Releases ==
 
