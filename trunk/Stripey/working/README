@@ -1,0 +1,25 @@
+Stripey
+
+Current Version: 0.1 (28 August 2006)
+
+Requirements:    This script requires Prototype.
+
+Purpose:         This script allows you to stripe just about
+                 anything you want -- DLs, OLs, ULs, and TABLEs.
+
+Use:             You simply make a new Stripey, supplying it
+                 with the <code>ID</code> of the element you
+                 want to stripe:
+
+                   var ul = new Stripey( 'my_id' );
+
+                 Stripey will automatically classify the
+                 identified element's rows as "odd" or "even."
+                 If you'd rather use other names, you can do
+                 that too:
+
+                   var ul = new Stripey( 'my_id', 'pretty', 'prettier' );
+
+Change Log:      0.1 (28 August 2006) - Initial script
+
+Demo:            http://easy-designs.net/code/stripey/demo/
