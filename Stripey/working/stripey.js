@@ -3,7 +3,7 @@ Function:       Stripey()
 Author:         Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:  28 August 2006
 Version:        0.1
-Homepage:       http://www.easy-designs.net/code/stripey/
+Homepage:       http://code.google.com/p/easy-designs/Stripey
 License:        MIT License (see homepage)
 Note:           If you change or improve on this script, please let us know by
                 emailing the author (above) with a link to your demo page.

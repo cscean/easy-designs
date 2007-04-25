@@ -1,3 +1,13 @@
+/*------------------------------------------------------------------------------
+Function:       RoundedCorners()
+Author:         Aaron Gustafson (aaron at easy-designs dot net)
+Creation Date:  29 January 2007
+Version:        0.1
+Homepage:       http://code.google.com/p/easy-designs/wiki/RoundedCorners
+License:        MIT License (see homepage)
+Note:           If you change or improve on this script, please let us know by
+                emailing the author (above) with a link to your demo page.
+------------------------------------------------------------------------------*/
 var RoundedCorners = Class.create();
 RoundedCorners.prototype = {
   _css:       false,
