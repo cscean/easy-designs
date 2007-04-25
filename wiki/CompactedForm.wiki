@@ -1,0 +1,33 @@
+#summary This script sets up forms to allow LABELs to overlay INPUTs.
+
+== Current Version ==
+
+0.1 (7 December 2006)
+
+== Requirements ==
+
+This script requires [http://prototypejs.org Prototype] and [http://www.danwebb.net/2006/9/3/low-pro-unobtrusive-scripting-for-prototype Low Pro].
+
+== License ==
+
+CompactedForm is distributed under the liberal [http://easy-designs.net/code/CompactedForm/working/LICENSE MIT License].
+
+== Use ==
+
+Coming soon.
+
+== Demo ==
+
+Coming soon.
+
+== Optimized Releases ==
+
+Coming soon.
+
+== Development Version ==
+
+If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/CompactedForm/working/CompactedForm.js download the uncompressed JavaScript source file].
+
+== Change Log ==
+
+  * 0.1 (7 December 2006) - Initial script
