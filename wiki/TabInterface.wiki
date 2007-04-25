@@ -6,7 +6,7 @@
 
 == Requirements ==
 
-This script requires [http://prototypejs.org Prototype].
+This script requires [http://prototypejs.org Prototype] and [http://www.danwebb.net/2006/9/3/low-pro-unobtrusive-scripting-for-prototype Low Pro].
 
 == License ==
 
