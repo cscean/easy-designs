@@ -1,0 +1,33 @@
+#summary This script generates all of the code necessary to create a tabbed interface.
+
+== Current Version ==
+
+0.1 (7 December 2006)
+
+== Requirements ==
+
+This script requires [http://prototypejs.org Prototype].
+
+== License ==
+
+TabInterface is distributed under the liberal [http://easy-designs.net/code/TabInterface/working/LICENSE MIT License].
+
+== Use ==
+
+Coming soon.
+
+== Demo ==
+
+Coming soon.
+
+== Optimized Releases ==
+
+Coming soon.
+
+== Development Version ==
+
+If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/TabInterface/working/TabInterface.js download the uncompressed JavaScript source file].
+
+== Change Log ==
+
+  * 0.1 (7 December 2006) - Initial script
