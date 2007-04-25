@@ -26,7 +26,7 @@ Coming soon.
 
 == Development Version ==
 
-If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/RotatingFeature/working/TabInterface.js download the uncompressed JavaScript source file].
+If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/RotatingFeature/working/RotatingFeature.js download the uncompressed JavaScript source file].
 
 == Change Log ==
 
