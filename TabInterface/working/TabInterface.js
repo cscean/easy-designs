@@ -2,120 +2,115 @@
 Function:       TabInterface()
 Author:         Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:  7 December 2006
-Version:        0.1
-Homepage:       http://code.google.com/p/easy-designs/TabInterface
+Version:        0.3
+Homepage:       http://code.google.com/p/easy-designs/wiki/TabInterface
 License:        MIT License (see homepage)
 Note:           If you change or improve on this script, please let us know by
                 emailing the author (above) with a link to your demo page.
 ------------------------------------------------------------------------------*/
-var TabInterface = Class.create();
-TabInterface.prototype = {
-  Version:    '0.1',
-  _id:        false, // folder-* string
-  _cabinet:   false, // entire component div
-  _active:    false, // folder-*-* string marks active
-  _tag:       false, // node name of heading tag
-  _index:     $ul(), // ul.tab-list of tabs
-  _tab:       $li(), // li.folder-tab prototype for cloning
-  _folder:    $div(),// div.folder prototype for cloning
-  _folders:   null,  // array of folder elements
-  initialize: function( el, index ){
-    // set the cabinet
-    this._cabinet = el;
-    Element.cleanWhitespace( this._cabinet );
+function TabInterface( el, i ){
+  // Public Properties
+  this.Version = '0.3'; // version
 
+  // Private Properties
+  var _i       = i;     // incrementor
+  var _cabinet = el;    // the "cabinet" element (container)
+  var _id      = false; // ID of _cabinet
+  var _active  = false; // ID of the active "folder"
+  var _tag     = false; // tag we'll split it on
+  // the tab list
+  var _index   = document.createElement( 'ul' );
+  // prototype elements
+  var _els     = { li:  document.createElement( 'li' ),
+                   div: document.createElement( 'div' ) };
+
+  // Private Methods
+  function initialize(){
     // set the id
-    this._id = el.getAttribute( 'id' ) || 'folder-' + index;
-    if( !el.getAttribute( 'id' ) ){
-      el.setAttribute( 'id', this._id );
+    _id = el.getAttribute( 'id' ) || 'folder-' + _i;
+    if( !el.getAttribute( 'id' ) ) el.setAttribute( 'id', _id );
+
+    // trim whitespace
+    var node = _cabinet.firstChild;
+    while( node ){
+      var nextNode = node.nextSibling;
+      if( node.nodeType == 3 &&
+          !/\S/.test( node.nodeValue ) )
+        _cabinet.removeChild( node );
+      node = nextNode;
     }
 
-    // set up the elements
-    Element.addClassName( this._index, 'tab-list' );
-    Element.addClassName( this._tab, 'folder-tab' );
-    Element.addClassName( this._folder, 'folder' );
-
-    // establish folders but retain original elements
-    this._folders = [];
-    for (var i=0; i < this._cabinet.childNodes.length; i++) {
-      var elem = this._cabinet.childNodes.item(i);
-      if (elem.className && Element.hasClassName(elem, "tab-unit")) {
-        this._folders.push(elem);
+    // find the first heading
+    var headers = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ];
+    var hLen = headers.length;
+    for( var i=0; i<hLen; i++ ){
+      if( _cabinet.firstChild.nodeName.toLowerCase() == headers[i] ){
+        _tag = headers[i];
+        break;
       }
     }
-    var tabs = this._index.cloneNode( true );
 
-    $A(this._folders).each(function(folderElem, i) {
-
-      // add class, and ID if unset
-      Element.addClassName(folderElem, 'folder');
-      if ( ! folderElem.id) {
-        folderElem.id = this._id + '-' + i;
+    // establish the folders
+    var rexp = new RegExp( '<(' + _tag + ')', 'ig' );
+    var arr  = _cabinet.innerHTML.replace( rexp, "||||<$1" ).split( '||||' );
+        arr.shift();
+    _cabinet.innerHTML = '';
+    removeClassName( _cabinet, 'tabbed' );
+    addClassName( _cabinet, 'tabbed-on' );
+    var aLen = arr.length;
+    for( var k=0; k<aLen; k++ ){
+      // build the div
+      var folder = _els.div.cloneNode( true );
+          addClassName( folder, 'folder' );
+          folder.setAttribute( 'id', _id + '-' + k );
+          folder.innerHTML = arr[k];
+          _cabinet.appendChild( folder );
+      // build the tab
+      var tab = _els.li.cloneNode( true );
+          tab.folder = folder.getAttribute( 'id' );
+          tab.setAttribute( 'id', tab.folder + '-tab' );
+          tab.onclick = swap; // set the action
+      var heading = folder.getElementsByTagName( _tag )[0];
+          if( heading.getAttribute( 'title' ) ){
+            tab.innerHTML = heading.getAttribute( 'title' )
+          } else {
+            tab.innerHTML = heading.innerHTML;
+            addClassName( heading, 'hidden' );
+          }
+          _index.appendChild( tab );
+      // active?
+      if( k == 0 ){
+        addClassName( folder, 'visible' );
+        _active = folder.getAttribute( 'id' );
+        addClassName( tab, 'active-tab' );
       }
-
-      // create tab element
-      folderElem.tab = this._tab.cloneNode( true );
-      folderElem.tab.folderElem = folderElem;
-      folderElem.tab.id = folderElem.id + '-tab';
-
-      var heading = this.findHeadingElement(folderElem);
-      if (heading == null) {
-        folderElem.tab.innerHTML = folderElem.id;
-      } else if (heading.getAttribute('title')) {
-        folderElem.tab.innerHTML = heading.getAttribute('title');
-      } else {
-        folderElem.tab.innerHTML = heading.innerHTML;
-      }
-
-      tabs.appendChild(folderElem.tab);
-      folderElem.tab.onclick = this.swap.bindAsEventListener( this );
-    }.bind(this));
-    this._cabinet.appendChild( tabs );
-
-    if (this._folders[0]){
-      Element.addClassName(this._folders[0], 'visible' );
-      Element.addClassName(this._folders[0].tab, 'active-tab' );
-      this._activeElem = this._folders[0];
     }
-
-    Element.removeClassName( this._cabinet, 'tabbed' );
-    Element.addClassName( this._cabinet, 'tabbed-on' );
-  },
-
-  // find the first heading in a folder element, or null if no heading
-  findHeadingElement: function(folder) {
-    var hs = ( 'h1|h2|h3|h4|h5|h6' ).split( '|' );
-    var curr = folder.firstChild;
-    while( curr != null && !hs.inArray( curr.nodeName.toLowerCase() ) ){
-      curr = DOM.nextElement( curr );
-    }
-    return curr;
-  },
-
-  swap:       function( e ){
-    trace( 'was active: ' + this._activeElem.id );
-    var tab = Event.element( e );
-    Element.removeClassName( this._activeElem.tab, 'active-tab' );
-    Element.removeClassName( this._activeElem, 'visible' );
-    Element.addClassName( tab, 'active-tab' );
-    Element.addClassName( tab.folderElem, 'visible' );
-    this._activeElem = tab.folderElem;
-    trace( 'now active: ' + this._activeElem.id );
+    // add the index
+    _index.className = 'tab-list';
+    _cabinet.appendChild( _index );
   }
+  function swap( e ){
+    e = ( e ) ? e : event;
+    var tab = e.target || e.srcElement;
+    removeClassName( document.getElementById( _active + '-tab' ), 'active-tab' );
+    removeClassName( document.getElementById( _active ), 'visible' );
+    addClassName( tab, 'active-tab' );
+    addClassName( document.getElementById( tab.folder ), 'visible' );
+    _active = tab.folder;
+  }
+  function addClassName( e, c ){
+    var classes = ( !e.className ) ? [] : e.className.split( ' ' );
+    classes.push( c );
+    e.className = classes.join( ' ' );
+  }
+  function removeClassName( e, c ){
+    var classes = e.className.split( ' ' );
+    for( var i=classes.length-1; i>=0; i-- ){
+      if( classes[i] == c ) classes.splice( i, 1 );
+    }
+    e.className = classes.join( ' ' );
+  }
+
+  // start it up
+  initialize();
 };
-
-// if Prototype, lowpro & required DOM methods are available
-if( typeof( Prototype ) != 'undefined' &&
-    typeof( LowPro ) != 'undefined' &&
-    document.getElementById &&
-    document.getElementsByTagName &&
-    document.createElement &&
-    document.getElementsByTagName( 'div' ) ){
-  Event.onReady( function(){
-    var cabinets = Array();
-    $$( 'div.tabbed' ).each( function( el, i ){
-      cabinets[i] = new TabInterface( el, i );
-    } );
-  } );
-}
-
