@@ -10,11 +10,11 @@ None.
 
 == License ==
 
-TabInterface is distributed under the liberal [http://easy-designs.net/code/TabInterface/working/LICENSE MIT License].
+TabInterface is distributed under the liberal [http://easy-designs.googlecode.com/svn/trunk/TabInterface/working/LICENSE MIT License].
 
 == Use ==
 
-To use, simply create a new `TabInterface`, passing it the element to tab and an iterator. If you have multiple tabbed elements on a page, it can be done in a loop:
+To use, simply include `TabInterface.js` and then classify elements you want tabbed as "tabbed". Then add a new anonymous function to your load event (`window` or DOM). For example:
 
 {{{
 if( typeOf( TabInterface ) != 'undefined' &&
@@ -22,6 +22,8 @@ if( typeOf( TabInterface ) != 'undefined' &&
     document.getElementsByTagName &&
     document.createElement ){
   var cabinets = Array();
+  /* using Jesse Skinner's addDOMLoadEvent()
+     http://www.thefutureoftheweb.com/blog/adddomloadevent */
   addDOMLoadEvent( function(){
     var collection = document.getElementsByTagName( '*' );
     var cLen = collection.length;
@@ -35,7 +37,13 @@ if( typeOf( TabInterface ) != 'undefined' &&
 }
 }}}
 
-Content is split using the first heading level (`H1`-`H6`) encountered. Tab labels will be either the header content or the heading's `TITLE` value.
+Many libraries, such as [http://prototypejs.org Prototype], offer nicer-looking means of collecting elements by `CLASS` and and those could certainly be substituted for the brute force testing seen above.
+
+Note: Tab labels will be either the header content or the heading's `TITLE` value.
+
+== How it works ==
+
+Content is split using the first heading level (`H1`-`H6`) encountered.
 
 == Demo ==
 
@@ -55,3 +63,5 @@ If you are interested in helping to further develop this script, you can [http:/
   * 0.1 (7 December 2006) - Initial script
   * 0.2 (unreleased)
   * 0.3 (17 June 2007) - Removed Prototype dependency, made most methods and properties private
+
+
