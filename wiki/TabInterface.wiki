@@ -2,11 +2,11 @@
 
 == Current Version ==
 
-0.1 (7 December 2006)
+0.3 (17 June 2007)
 
 == Requirements ==
 
-This script requires [http://prototypejs.org Prototype] and [http://www.danwebb.net/2006/9/3/low-pro-unobtrusive-scripting-for-prototype Low Pro].
+None.
 
 == License ==
 
@@ -14,20 +14,42 @@ TabInterface is distributed under the liberal [http://easy-designs.net/code/TabI
 
 == Use ==
 
-Coming soon.
+To use, simply create a new `TabInterface`, passing it the element to tab and an iterator. If you have multiple tabbed elements on a page, it can be done in a loop:
+
+{{{
+if( typeOf( TabInterface ) != 'undefined' &&
+    document.getElementById &&
+    document.getElementsByTagName &&
+    document.createElement ){
+  var cabinets = Array();
+  addDOMLoadEvent( function(){
+    var collection = document.getElementsByTagName( '*' );
+    var cLen = collection.length;
+    for( var i=0; i<cLen; i++ ){
+      if( collection[i] &&
+          /\s*tabbed\s*/.test( collection[i].className ) ){
+        cabinets.push( new TabInterface( collection[i], i ) );
+      }
+    }
+  } );
+}
+}}}
 
 == Demo ==
 
-Coming soon.
+View [/svn/trunk/TabInterface/demo/index.html the demo].
 
 == Optimized Releases ==
 
-Coming soon.
+  * [/svn/trunk/TabInterface/0.3/TabInterface-v0.3.zip 0.3 (2.16 KB)]
+  * [/svn/trunk/TabInterface/0.1/TabInterface-v0.1.zip 0.1 (2.33 KB)]
 
 == Development Version ==
 
-If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/TabInterface/working/TabInterface.js download the uncompressed JavaScript source file].
+If you are interested in helping to further develop this script, you can [/svn/trunk/TabInterface/working/TabInterface.js download the uncompressed JavaScript source file].
 
 == Change Log ==
 
   * 0.1 (7 December 2006) - Initial script
+  * 0.2 (unreleased)
+  * 0.3 (17 June 2007) - Removed Prototype dependency, made most methods and properties private
