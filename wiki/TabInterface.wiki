@@ -35,18 +35,20 @@ if( typeOf( TabInterface ) != 'undefined' &&
 }
 }}}
 
+Content is split using the first heading level (`H1`-`H6`) encountered. Tab labels will be either the header content or the heading's `TITLE` value.
+
 == Demo ==
 
-View [/svn/trunk/TabInterface/demo/index.html the demo].
+View [http://easy-designs.googlecode.com/svn/trunk/TabInterface/demo/index.html the demo].
 
 == Optimized Releases ==
 
-  * [/svn/trunk/TabInterface/0.3/TabInterface-v0.3.zip 0.3 (2.16 KB)]
-  * [/svn/trunk/TabInterface/0.1/TabInterface-v0.1.zip 0.1 (2.33 KB)]
+  * [http://easy-designs.googlecode.com/svn/trunk/TabInterface/0.3/TabInterface-v0.3.zip Compressed 0.3] [2.16 KB]
+  * [http://easy-designs.googlecode.com/svn/trunk/TabInterface/0.1/TabInterface-v0.1.zip Compressed 0.1] [2.33 KB]
 
 == Development Version ==
 
-If you are interested in helping to further develop this script, you can [/svn/trunk/TabInterface/working/TabInterface.js download the uncompressed JavaScript source file].
+If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/TabInterface/working/TabInterface.js download the uncompressed JavaScript source file].
 
 == Change Log ==
 
