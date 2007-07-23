@@ -1,0 +1,80 @@
+#summary Replicates the functionality of ActionScript's Trace window in JavaScript
+
+== Current Version ==
+
+1.3 (1 November 2005)
+
+== Requirements ==
+
+If you would like a draggable window, it requires [http://www.youngpup.net/ Aaron Boodman]'s [http://www.youngpup.net/2001/domdrag DOM Drag Library] (included with the "drag" distribution)
+
+== License ==
+
+jsTrace is distributed under the liberal [http://easy-designs.googlecode.com/svn/trunk/jsTrace/working/LICENSE MIT License].
+
+== Use ==
+
+In the head of your document, include the JavaScript file(s):
+
+{{{
+<script type="text/javascript" src="/path/to/jsTrace.js"></script>
+<script type="text/javascript" src="/path/to/dom-drag.js"></script>
+}}}
+
+Then, simply add the following function to your main JavaScript file (or a library you use) to allow you to trace messages to the window:</p>
+
+{{{
+var trace;
+if( typeof( jsTrace ) != 'undefined' ){
+  trace = function( msg ){
+    jsTrace.send( msg );
+  };
+} else {
+  trace = function(){};
+}
+}}}
+
+Whenever you want to trace something to the window, simply call `trace()`:
+
+{{{
+trace( 'This message goes to the window' );
+}}}
+
+The best part is, when you are finished debugging, you leave the `trace()` calls in your code and can simply delete the references to the two JavaScript files from the `HEAD` of your document and it will not cause JavaScript errors.
+
+== Demo ==
+
+You can [http://easy-designs.googlecode.com/svn/trunk/jsTrace/demo/index.html view this script in action] if you have a modern browser. The window is draggable and resizable. You can also clear the window or set a delimeter to mark your place.
+
+== Optimized Releases ==
+
+  * [http://easy-designs.googlecode.com/svn/trunk/jsTrace/1.3/jsTrace-v1.3-drag.zip Compressed 1.3 (Draggable)] [3.54 KB]</li>
+  * [http://easy-designs.googlecode.com/svn/trunk/jsTrace/1.3/jsTrace-v1.3-nodrag.zip Compressed 1.3 (Not Draggable)] [2.43 KB]</li>
+  * [http://easy-designs.googlecode.com/svn/trunk/jsTrace/1.2/jsTrace-v1.2-drag.zip Compressed 1.2 (Draggable)] [3.48 KB]</li>
+  * [http://easy-designs.googlecode.com/svn/trunk/jsTrace/1.2/jsTrace-v1.2-nodrag.zip Compressed 1.2 (Not Draggable)] [2.36 KB]</li>
+  * [http://easy-designs.googlecode.com/svn/trunk/jsTrace/1.1/jsTrace-v1.1-drag.zip Compressed 1.1 (Draggable)] [3.43 KB]</li>
+  * [http://easy-designs.googlecode.com/svn/trunk/jsTrace/1.1/jsTrace-v1.1-nodrag.zip Compressed 1.1 (Not Draggable)] [2.32 KB]</li>
+  * [http://easy-designs.googlecode.com/svn/trunk/jsTrace/1.0/jsTrace-v1.0-drag.zip Compressed 1.0 (Draggable)] [3.03 KB]</li>
+  * [http://easy-designs.googlecode.com/svn/trunk/jsTrace/1.0/jsTrace-v1.0-nodrag.zip Compressed 1.0 (Not Draggable)] [1.91 KB]</li>
+
+== Development Version ==
+
+If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/jsTrace/working/TabInterface.js download the uncompressed JavaScript source file].
+
+== Change Log ==
+
+  * 1.0 (26 October 2005) - Initial script
+  * 1.1 (29 October 2005) - "Memory" enhancement (by Joe Shelby) added (position &#38; size remembered via an open cookie), size of additional tools text increased, streamlined creation of new tools (for future development), added generic timer function (for future development), `jsTrace.kill()` renamed `jsTrace.killWindow()`
+  * 1.2 (30 October 2005) - Added buffer for traces executed before the window is drawn
+  * 1.3 (1 November 2005) - Buffer fix for IE and viewport now scrolls with the content (newest lines show by default)
+
+== Who's Using jsTrace? ==
+
+  * [http://www.cartoweb.org/ CartoWeb]
+  * CT Department of Environmental Protection
+  * [http://ethnio.com Ethnio]
+  * Konica Minolta
+  * [http://riverviewfh.com Riverview Funeral Home]
+  * Twinings USA
+  * [http://www.jifty.org/view/Wifty Wifty]
+
