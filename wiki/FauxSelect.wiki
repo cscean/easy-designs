@@ -1,4 +1,4 @@
-#summary This script builds a stylable, accessible `SELECT` replacement
+#summary This script builds a stylable, accessible SELECT replacement
 
 == Current Version ==
 
