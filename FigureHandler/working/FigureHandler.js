@@ -9,21 +9,23 @@ Note:           If you change or improve on this script, please let us know by
                 emailing the author (above) with a link to your demo page.
 ------------------------------------------------------------------------------*/
 // Figure handling
-function FigureHandler( sizes ){
+function FigureHandler( id, sizes ){
 
   // private properties
   if( typeof( sizes ) !== 'object' ){
     var sizes  = { '75-100': 'full-col',
-                   '66-75':  'three-quarters-col',
-                   '50-66':  'two-thirds-col',
-                   '33-50':  'half-col',
-                   '25-33':  'third-col',
+                   '67-75':  'three-quarters-col',
+                   '50-67':  'two-thirds-col',
+                   '34-50':  'half-col',
+                   '25-34':  'third-col',
                    '0-25':   'quarter-col' };
   }
+  var selector = '.figure';
+  if( typeof( id ) == 'string' ) selector = '#' + id + ' ' + selector;
 
   // private methods
   function init(){
-    $$( '.figure' ).each( function( figure ){
+    $$( selector ).each( function( figure ){
       // get the image width
       var img_width = figure.getElementsByTagName( 'img' )[0].width;
       // determine the relative sizing
