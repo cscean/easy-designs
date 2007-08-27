@@ -6,9 +6,10 @@ Created by Easy! Designs, LLC - easy-designs.net
 
 /* =Layout */
 #content {
+  background: url(content.gif) 0 0 repeat;
   margin: 0 auto;
   padding: 17px 0 43px;
-  width: 800px;
+  width: 801px;
 }
 #content:after {
   content: '.';
@@ -19,14 +20,12 @@ Created by Easy! Designs, LLC - easy-designs.net
   text-indent: -999em;
 }
 #main {
-  background: url(main-default.gif) 20px 0 repeat-y;
   float: left;
-  padding: 0 10px 0 20px;
-  margin-right: 12px;
-  width: 468px;
+  padding: 0 0 0 20px;
+  margin-right: 30px;
+  width: 460px;
 }
 #extras {
-  background: url(extras-default.gif) 10px 0 repeat-y;
   float: left;
   width: 260px;
   min-height: 394px;
@@ -45,9 +44,9 @@ Created by Easy! Designs, LLC - easy-designs.net
 h1 {
   background: #85755e url(/css/img/h1.gif) top left no-repeat;
   color: #fff;
-  width: 458px;
-  margin: 0 auto 14px;
-  padding: 18px 322px 18px 20px;
+  width: 761px;
+  margin: 0 auto;
+  padding: 18px 20px;
   position: relative;
   z-index: 1;
 }
