@@ -29,7 +29,7 @@ function FigureHandler( id, sizes ){
       // get the image width
       var img_width = figure.getElementsByTagName( 'img' )[0].width;
       // determine the relative sizing
-      var col_width = parseInt( figure.parentNode.getStyle( 'width' ) );
+      var col_width = parseInt( $( figure.parentNode ).getStyle( 'width' ) );
       var percent = Math.ceil( img_width/col_width * 100 );
       var range, col_class;
       for( var size in sizes ){
@@ -42,7 +42,7 @@ function FigureHandler( id, sizes ){
       }
       figure.addClassName( col_class );
       // set the width of any paragraphs to match
-      $A( figure.getElementsByTagName( 'p' ) ). each( function( p ){
+      $A( figure.getElementsByTagName( 'p' ) ).each( function( p ){
         p.style.width = img_width + 'px';
       } );
     });
