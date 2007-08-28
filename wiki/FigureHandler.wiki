@@ -1,4 +1,4 @@
-#summary This script allows the creation of layout rules for figures.
+#summary This script facilitates the creation of layout rules for figures.
 
 == Current Version ==
 
@@ -98,4 +98,3 @@ If you are interested in helping to further develop this script, you can [http:/
 == Change Log ==
 
   * 0.1 (28 September 2006) - Initial script
-
