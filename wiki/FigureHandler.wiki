@@ -27,7 +27,7 @@ By default the following `class`es are applied:
 
 === `FigureHandler`'s Default `class`es ===
 
-|| *Percent of the Column* || `class` Applied ||
+|| *Percent of the Column* || *`class` Applied* ||
 || 0-25 || quarter-col ||
 || 25-34 || third-col ||
 || 34-50 || half-col ||
