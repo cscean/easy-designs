@@ -8,7 +8,6 @@ License:        MIT License (see homepage)
 Note:           If you change or improve on this script, please let us know by
                 emailing the author (above) with a link to your demo page.
 ------------------------------------------------------------------------------*/
-// Figure handling
 function FigureHandler( id, sizes ){
 
   // private properties
