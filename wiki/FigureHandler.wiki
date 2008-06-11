@@ -93,7 +93,7 @@ View [http://easy-designs.googlecode.com/svn/trunk/FigureHandler/demo/default.ht
 
 == Development Version ==
 
-If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/FauxSelect/working/FigureHandler.js download the uncompressed JavaScript source file].
+If you are interested in helping to further develop this script, you can [http://easy-designs.googlecode.com/svn/trunk/FigureHandler/working/FigureHandler.js download the uncompressed JavaScript source file].
 
 == Change Log ==
 
