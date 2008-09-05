@@ -3,7 +3,7 @@
 
 == Current Version ==
 
-1.0 (5 September 2008)
+[http://easy-designs.googlecode.com/svn/trunk/ExpressionEngine%20Add%20Ons/Extensions/login_on_registration/latest/ext.login_on_registration.php.zip download]
 
 == Requirements ==
 
@@ -17,10 +17,6 @@ ext.login_on_registration.php is distributed under the liberal [http://easy-desi
 
 Simply download and enable the extension in the ExpressionEngine Control Panel.
 
-== Optimized Releases ==
-
-  * [http://easy-designs.googlecode.com/svn/trunk/ExpressionEngine%20Add%20Ons/Extensions/login_on_registration/1.0/ext.login_on_registration.php.zip Compressed 1.0] [1.46 KB]
-
 == Change Log ==
 
-  * 1.0 (5 September 2008) - Initial release
+  * [http://easy-designs.googlecode.com/svn/trunk/ExpressionEngine%20Add%20Ons/Extensions/login_on_registration/1.0/ext.login_on_registration.php.zip 1.0]  (5 September 2008) - Initial release
