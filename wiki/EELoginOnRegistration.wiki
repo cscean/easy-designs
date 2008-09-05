@@ -1,0 +1,26 @@
+#summary Automatically logs a member into ExpressionEngine when registering
+#labels ExpressionEngine,Login,Registration
+
+== Current Version ==
+
+1.0 (5 September 2008)
+
+== Requirements ==
+
+  * [http://www.solspace.com/software/detail/user/ Solspace's User Module]
+
+== License ==
+
+ext.login_on_registration.php is distributed under the liberal [http://easy-designs.googlecode.com/svn/trunk/ExpressionEngine%20Add%20Ons/Extensions/login_on_registration/LICENSE MIT License].
+
+== Use ==
+
+Simply download and enable the extension in the ExpressionEngine Control Panel.
+
+== Optimized Releases ==
+
+  * [http://easy-designs.googlecode.com/svn/trunk/ExpressionEngine%20Add%20Ons/Extensions/login_on_registration/1.0/ext.login_on_registration.php.zip Compressed 1.0] [1.46 KB]
+
+== Change Log ==
+
+  * 1.0 (5 September 2008) - Initial release
